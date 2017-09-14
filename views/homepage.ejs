@@ -1,0 +1,49 @@
+
+<style>
+  div#videoContainer{
+    position: relative;
+    height: 360px;
+    width: 640px;
+    background-color: rgba(10, 75, 62, 0.05);
+  }
+  div#overlay {
+    position: absolute;
+    border: 3px;
+    top: 0px;
+    right: 0;
+    z-index: 1;
+  }
+  div#buttons {
+    position: absolute;
+    z-index: 2;
+  }
+  div#faceOverlay {
+    position: absolute;
+    background-color: white;
+    border: 3px;
+    top: 0px;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+  }
+</style>
+
+<div class="default-page">
+   <div id="videoContainer">
+      <div id="overlay">
+        <video autoplay="true"   id="outgoing-video"></video>
+      </div>
+     <div id="faceOverlay">
+
+     </div>
+       <video autoplay="true"   id="incoming-video"></video>
+
+   </div>
+  <div id="buttons">
+  <input id="callbutton" type="button" value="Call"/> <input id="uri" type="text" value=""/>
+  <button id="hangup">hangup</button>
+  <button id="capture">Start Emotion Capture</button>
+  </div>
+  <div id="output"></div>
+</div>
